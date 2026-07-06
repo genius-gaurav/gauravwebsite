@@ -1,0 +1,23 @@
+{
+  "name": "gauravwebsite",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "bugs": {
+    "url": "https://github.com/genius-gaurav/gauravwebsite/issues"
+  },
+  "homepage": "https://github.com/genius-gaurav/gauravwebsite#readme",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.2",
+    "tailwindcss": "^4.3.2",
+    "vite": "^8.1.3"
+  },
+  "dependencies": {
+    "lucide": "^1.23.0"
+  }
+}
