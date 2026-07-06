@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaurav Yadav | Portfolio</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Gaurav Yadav, Full-Stack Software Engineer. Creating a digital world of personalization. Specializing in React, Tailwind, SQL, Python, C, and C++.">
+  <meta name="author" content="Gaurav Yadav">
+  <!-- Favicon using amurot.com favicon fetcher as requested -->
+  <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?sz=64&domain=amurot.com">
+  <!-- Typography Fonts (Inter as the fallback for Airbnb Cereal VF) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       1. Top Header Navigation
+       ========================================== -->
+  <header class="top-header">
+    <a href="#" class="logo-container">
+      <svg class="logo-icon" viewBox="0 0 32 32">
+        <path d="M16 1c-2.007 0-3.5 1.5-3.5 3.5 0 .864.385 1.636.98 2.22l-10.3 17.68c-.68 1.16-.76 2.54-.22 3.78s1.6 2.14 2.94 2.44c.42.1.86.16 1.3.16h21.6c.44 0 .88-.06 1.3-.16 1.34-.3 2.4-1.2 2.94-2.44s.46-2.62-.22-3.78l-10.3-17.68c.595-.584.98-1.356.98-2.22 0-2-1.493-3.5-3.5-3.5zm0 2c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm.02 5.02L26.3 25.68c.24.42.22.92-.04 1.32-.26.42-.74.68-1.26.74-.14.02-.3.04-.46.04H7.46c-.16 0-.32-.02-.46-.04-.52-.06-1-.32-1.26-.74-.26-.4-.28-.9-.04-1.32l10.28-17.66c.02-.02.04-.04.04-.04z"/>
+      </svg>
+      <span class="logo-text">gaurav yadav</span>
+    </a>
+
+    <nav class="product-tabs">
+      <button class="product-tab active" data-section="projects">Projects</button>
+      <button class="product-tab" data-section="experience">Experience</button>
+      <button class="product-tab" data-section="about">About & Skills <span class="new-badge">new</span></button>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#contact" class="header-host-link" id="btn-header-hire">Hire me</a>
+      <button class="btn btn-icon-circle" style="background: transparent;" aria-label="Globe">
+        <svg viewBox="0 0 16 16" style="width: 16px; height: 16px; fill: currentColor;">
+          <path d="M8 0a8 8 0 1 0 8 8A8.009 8.009 0 0 0 8 0zm6.813 5.5H11.96a14.28 14.28 0 0 0-1.258-3.9 6.526 6.526 0 0 1 4.11 3.9zm-4.316-3.9A12.44 12.44 0 0 1 11.83 5.5H8.17a12.44 12.44 0 0 1 1.332-3.9zM8 5.5h-3.66a12.44 12.44 0 0 1 1.33-3.9A12.44 12.44 0 0 1 8 5.5zm-4.332-3.9a14.28 14.28 0 0 0-1.258 3.9 6.526 6.526 0 0 1 4.11-3.9zM1.187 7h4.004a16.89 16.89 0 0 0 0 2H1.187a6.574 6.574 0 0 1 0-2zm4.004 4H1.187a6.526 6.526 0 0 0 4.11 3.9 14.28 14.28 0 0 1-1.258-3.9zm2.639 3.9a12.44 12.44 0 0 1-1.33-3.9h3.66a12.44 12.44 0 0 1-1.33 3.9zM8 10.5h-3.66a12.44 12.44 0 0 0 1.33 3.9A12.44 12.44 0 0 0 8 10.5zm1.17 3.9a14.28 14.28 0 0 0 1.258-3.9h2.755a6.526 6.526 0 0 1-4.013 3.9zM14.813 9h-4.004a16.89 16.89 0 0 0 0-2h4.004a6.574 6.574 0 0 1 0 2zm-5.643 0H6.83a14.89 14.89 0 0 1 0-2h2.34a14.89 14.89 0 0 1 0 2z"/>
+        </svg>
+      </button>
+      <div class="header-profile-menu" id="profile-dropdown-trigger">
+        <svg viewBox="0 0 32 32" style="width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 3px;">
+          <line x1="3" y1="8" x2="29" y2="8" />
+          <line x1="3" y1="16" x2="29" y2="16" />
+          <line x1="3" y1="24" x2="29" y2="24" />
+        </svg>
+        <div class="avatar-circle">GY</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       2. Search Filter Pill Bar
+       ========================================== -->
+  <section class="search-container">
+    <div class="search-bar-pill">
+      
+      <!-- Category Segment -->
+      <div class="search-field-segment" tabindex="0">
+        <label for="filter-category">Focus</label>
+        <select id="filter-category" aria-label="Select Focus">
+          <option value="all">All Specialties</option>
+          <option value="web-design">Web Design</option>
+          <option value="frontend">Frontend Development</option>
+          <option value="dbms">DBMS / SQL</option>
+          <option value="systems">Systems (C/C++)</option>
+        </select>
+      </div>
+
+      <div class="search-divider"></div>
+
+      <!-- Timeline Segment -->
+      <div class="search-field-segment" tabindex="0">
+        <label for="filter-year">Timeline</label>
+        <select id="filter-year" aria-label="Select Year">
+          <option value="all">All Years</option>
+          <option value="2026">2026 (Active)</option>
+          <option value="2025">2025</option>
+        </select>
+      </div>
+
+      <div class="search-divider"></div>
+
+      <!-- Tech Stack Segment -->
+      <div class="search-field-segment" tabindex="0">
+        <label for="filter-tech">Tech Stack</label>
+        <select id="filter-tech" aria-label="Select Tech Stack">
+          <option value="all">Any Stack</option>
+          <option value="react">React / Tailwind</option>
+          <option value="sql">SQL / DBMS</option>
+          <option value="python">Python</option>
+          <option value="cpp">C / C++</option>
+        </select>
+      </div>
+
+      <!-- Search Orb Action -->
+      <button class="search-orb" id="search-filter-btn" aria-label="Search Filter">
+        <svg viewBox="0 0 32 32">
+          <path d="M29.5 27.5L22.8 20.8C24.8 18.4 26 15.4 26 12C26 5.4 20.6 0 14 0C7.4 0 2 5.4 2 12C2 18.6 7.4 24 14 24C17.4 24 20.4 22.8 22.8 20.8L29.5 27.5L29.5 27.5ZM14 22C8.5 22 4 17.5 4 12C4 6.5 8.5 2 14 2C19.5 2 24 6.5 24 12C24 17.5 19.5 22 14 22Z"/>
+        </svg>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. Category Scrollable Skill Strip
+       ========================================== -->
+  <nav class="category-container" aria-label="Skill Categories">
+    <button class="category-tab active" data-skill="all">
+      <span class="category-icon">⚡</span>
+      <span>All Skills</span>
+    </button>
+    <button class="category-tab" data-skill="react">
+      <span class="category-icon">⚛️</span>
+      <span>React / Frontend</span>
+    </button>
+    <button class="category-tab" data-skill="dbms">
+      <span class="category-icon">💾</span>
+      <span>DBMS (SQL)</span>
+    </button>
+    <button class="category-tab" data-skill="python">
+      <span class="category-icon">🐍</span>
+      <span>Python</span>
+    </button>
+    <button class="category-tab" data-skill="cpp">
+      <span class="category-icon">⚙️</span>
+      <span>C / C++</span>
+    </button>
+    <button class="category-tab" data-skill="web-design">
+      <span class="category-icon">🎨</span>
+      <span>Web Design</span>
+    </button>
+  </nav>
+
+  <!-- ==========================================
+       4. Hero Banner Section
+       ========================================== -->
+  <main class="container">
+    <section class="hero-section" id="hero">
+      <div class="hero-layout">
+        
+        <div class="hero-text-content">
+          <span class="hero-subtitle">Gaurav Yadav</span>
+          <h1 class="hero-title">Creating a digital world of personalization</h1>
+          <p class="hero-desc txt-body-md">
+            Full-Stack Software Engineer based in Bilaspur, Chhattisgarh, India. Passioned about building interactive web platforms, backend systems, and structured databases.
+          </p>
+          <div class="hero-badge-strip">
+            <div class="hero-badge">
+              <span class="hero-badge-star">★</span>
+              <span>4.5 Rating by Bhaskar</span>
+            </div>
+            <div class="hero-badge">
+              <span>💼</span>
+              <span>amurot.com Intern</span>
+            </div>
+            <div class="hero-badge">
+              <span>🎓</span>
+              <span>IT A Class Representative</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-large-container">
+            <div class="avatar-large">GY</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         5. Projects Card Grid (listings)
+         ========================================== -->
+    <section class="projects-section-wrap" id="projects-section">
+      <div class="section-header">
+        <h2 class="txt-display-md">Explore Gaurav's Work</h2>
+      </div>
+
+      <div class="cards-grid" id="projects-grid">
+        
+        <!-- Project 1: Internship (Amurot) -->
+        <article class="project-card" data-project-id="1" data-category="web-design" data-year="2026" data-tech="web-design">
+          <button class="btn-heart-wishlist" aria-label="Save project">
+            <svg viewBox="0 0 32 32">
+              <path d="M16 28.27L14.24 26.66C8 21 4 17.38 4 13A8.86 8.86 0 0 1 12.87 4c2.8 0 5.48 1.83 6.63 4.45A8.86 8.86 0 0 1 31.42 13c0 4.38-4 8-10.24 13.66z"/>
+            </svg>
+          </button>
+          <span class="card-badge">Class Representative Choice</span>
+          <div class="card-media">
+            <!-- Custom graphic mockup for Amurot Web Design using SVG for rich aesthetics -->
+            <div class="card-media-placeholder">
+              <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" fill="none" stroke="#ff385c" stroke-width="4"/>
+                <path d="M30 50h40M50 30v40" stroke="#ff385c" stroke-width="4"/>
+                <text x="50" y="53" text-anchor="middle" font-size="8" fill="#222222" font-family="sans-serif" font-weight="bold">AMUROT</text>
+              </svg>
+              <span>Website Design Intern</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <div class="card-title-row">
+              <h3 class="card-title">Website Design for Amurot</h3>
+              <div class="card-rating">
+                <svg class="card-rating-star" viewBox="0 0 32 32"><path d="M16 2l4.87 9.87L31 13.37l-7.62 7.42L25.18 31 16 25.87 6.82 31l1.8-10.21L1 13.37l10.13-1.5L16 2z"/></svg>
+                <span>4.5</span>
+              </div>
+            </div>
+            <p class="card-subtitle">Bilaspur, Chhattisgarh</p>
+            <p class="card-tech-stack">HTML · CSS · UX Design</p>
+            <div class="card-footer-row">
+              <span class="card-link-action">Explore internship details</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Personalized Web Apps (Mockup) -->
+        <article class="project-card" data-project-id="2" data-category="frontend" data-year="2026" data-tech="react">
+          <button class="btn-heart-wishlist" aria-label="Save project">
+            <svg viewBox="0 0 32 32">
+              <path d="M16 28.27L14.24 26.66C8 21 4 17.38 4 13A8.86 8.86 0 0 1 12.87 4c2.8 0 5.48 1.83 6.63 4.45A8.86 8.86 0 0 1 31.42 13c0 4.38-4 8-10.24 13.66z"/>
+            </svg>
+          </button>
+          <span class="card-badge">Guest Favorite</span>
+          <div class="card-media">
+            <div class="card-media-placeholder">
+              <svg viewBox="0 0 100 100">
+                <polygon points="50,15 90,85 10,85" fill="none" stroke="#222222" stroke-width="4"/>
+                <circle cx="50" cy="55" r="15" fill="#ff385c"/>
+              </svg>
+              <span>Personalized Web Apps</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <div class="card-title-row">
+              <h3 class="card-title">Customizable Portfolio Systems</h3>
+              <div class="card-rating">
+                <svg class="card-rating-star" viewBox="0 0 32 32"><path d="M16 2l4.87 9.87L31 13.37l-7.62 7.42L25.18 31 16 25.87 6.82 31l1.8-10.21L1 13.37l10.13-1.5L16 2z"/></svg>
+                <span>4.8</span>
+              </div>
+            </div>
+            <p class="card-subtitle">Remote Project</p>
+            <p class="card-tech-stack">React · TailwindCSS</p>
+            <div class="card-footer-row">
+              <span class="card-link-action">View details</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Relational Databases (Mockup) -->
+        <article class="project-card" data-project-id="3" data-category="dbms" data-year="2025" data-tech="sql">
+          <button class="btn-heart-wishlist" aria-label="Save project">
+            <svg viewBox="0 0 32 32">
+              <path d="M16 28.27L14.24 26.66C8 21 4 17.38 4 13A8.86 8.86 0 0 1 12.87 4c2.8 0 5.48 1.83 6.63 4.45A8.86 8.86 0 0 1 31.42 13c0 4.38-4 8-10.24 13.66z"/>
+            </svg>
+          </button>
+          <div class="card-media">
+            <div class="card-media-placeholder">
+              <svg viewBox="0 0 100 100">
+                <rect x="20" y="20" width="60" height="15" rx="5" fill="none" stroke="#222222" stroke-width="4"/>
+                <rect x="20" y="42" width="60" height="15" rx="5" fill="none" stroke="#222222" stroke-width="4"/>
+                <rect x="20" y="65" width="60" height="15" rx="5" fill="none" stroke="#222222" stroke-width="4"/>
+              </svg>
+              <span>Relational Databases</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <div class="card-title-row">
+              <h3 class="card-title">DBMS Schema Optimizer</h3>
+              <div class="card-rating">
+                <svg class="card-rating-star" viewBox="0 0 32 32"><path d="M16 2l4.87 9.87L31 13.37l-7.62 7.42L25.18 31 16 25.87 6.82 31l1.8-10.21L1 13.37l10.13-1.5L16 2z"/></svg>
+                <span>4.7</span>
+              </div>
+            </div>
+            <p class="card-subtitle">DBMS Design</p>
+            <p class="card-tech-stack">SQL · DB Schema Setup</p>
+            <div class="card-footer-row">
+              <span class="card-link-action">View schema details</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Systems Development (Mockup) -->
+        <article class="project-card" data-project-id="4" data-category="systems" data-year="2025" data-tech="cpp">
+          <button class="btn-heart-wishlist" aria-label="Save project">
+            <svg viewBox="0 0 32 32">
+              <path d="M16 28.27L14.24 26.66C8 21 4 17.38 4 13A8.86 8.86 0 0 1 12.87 4c2.8 0 5.48 1.83 6.63 4.45A8.86 8.86 0 0 1 31.42 13c0 4.38-4 8-10.24 13.66z"/>
+            </svg>
+          </button>
+          <div class="card-media">
+            <div class="card-media-placeholder">
+              <svg viewBox="0 0 100 100">
+                <path d="M20 30h30l10 10h20v40H20z" fill="none" stroke="#222222" stroke-width="4"/>
+                <text x="35" y="60" font-size="12" fill="#ff385c" font-family="monospace">&gt;_</text>
+              </svg>
+              <span>Systems Software & CLI</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <div class="card-title-row">
+              <h3 class="card-title">CLI Automation Tools</h3>
+              <div class="card-rating">
+                <svg class="card-rating-star" viewBox="0 0 32 32"><path d="M16 2l4.87 9.87L31 13.37l-7.62 7.42L25.18 31 16 25.87 6.82 31l1.8-10.21L1 13.37l10.13-1.5L16 2z"/></svg>
+                <span>4.9</span>
+              </div>
+            </div>
+            <p class="card-subtitle">Systems Engineering</p>
+            <p class="card-tech-stack">C · C++ · Python</p>
+            <div class="card-footer-row">
+              <span class="card-link-action">View repository</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         6. Experience Section (Experiences)
+         ========================================== -->
+    <section class="experience-section" id="experience-section-wrap">
+      <div class="section-header">
+        <h2 class="txt-display-md">Professional Journey</h2>
+      </div>
+
+      <div class="exp-grid">
+        
+        <!-- Experience Item 1: Internship -->
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-org-block">
+              <div class="exp-org-icon">
+                <img src="https://www.google.com/s2/favicons?sz=64&domain=amurot.com" alt="amurot logo">
+              </div>
+              <div class="exp-title-block">
+                <h3 class="exp-org-name">amurot.com</h3>
+                <span class="exp-role">Website Design Intern</span>
+              </div>
+            </div>
+            <span class="exp-timeline">Jan 2026 - Present</span>
+          </div>
+          <ul class="exp-bullet-list">
+            <li>Worked on UI/UX redesign cycles to build friendly interfaces for the main website.</li>
+            <li>Collaborated with engineering teams to map high-fidelity web specifications.</li>
+            <li>Tested user pathways and optimized responsive code across various viewports.</li>
+          </ul>
+        </div>
+
+        <!-- Experience Item 2: Class Representative -->
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-org-block">
+              <div class="exp-org-icon" style="font-size: 24px; font-weight: 700; color: var(--color-primary);">
+                IT
+              </div>
+              <div class="exp-title-block">
+                <h3 class="exp-org-name">Information Technology (Sec A)</h3>
+                <span class="exp-role">Class Representative</span>
+              </div>
+            </div>
+            <span class="exp-timeline">Academic Year 2025 - 2026</span>
+          </div>
+          <ul class="exp-bullet-list">
+            <li>Acting as a core connection between faculty management and student cohorts.</li>
+            <li>Leading class task delegations and organizing study/lab discussion circles.</li>
+            <li>Resolved scheduling concerns and represented the student cohort in department meetups.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         7. Reviews / Testimonials Section
+         ========================================== -->
+    <section class="reviews-section" id="reviews-section-wrap">
+      
+      <!-- Big Laurel Rating display -->
+      <div class="rating-header-display">
+        <svg class="laurel-wreath" viewBox="0 0 24 24">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <div class="rating-score-block">
+          <span class="rating-score-num">4.5</span>
+          <span class="rating-score-label">Highly Rated</span>
+          <span class="rating-score-desc">Based on peer reviews</span>
+        </div>
+        <svg class="laurel-wreath reversed" viewBox="0 0 24 24">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </div>
+
+      <div class="reviews-grid">
+        
+        <!-- Review 1: Bhaskar -->
+        <div class="review-item">
+          <div class="review-author-row">
+            <div class="review-author-avatar">B</div>
+            <div class="review-author-meta">
+              <h4 class="review-author-name">Bhaskar</h4>
+              <span class="review-author-title">Project Partner & Peer</span>
+            </div>
+          </div>
+          <div class="review-stars-row">
+            <svg viewBox="0 0 32 32"><path d="M16 2l4.87 9.87L31 13.37l-7.62 7.42L25.18 31 16 25.87 6.82 31l1.8-10.21L1 13.37l10.13-1.5L16 2z"/></svg>
+            <svg viewBox="0 0 32 32"><path d="M16 2l4.87 9.87L31 13.37l-7.62 7.42L25.18 31 16 25.87 6.82 31l1.8-10.21L1 13.37l10.13-1.5L16 2z"/></svg>
+            <svg viewBox="0 0 32 32"><path d="M16 2l4.87 9.87L31 13.37l-7.62 7.42L25.18 31 16 25.87 6.82 31l1.8-10.21L1 13.37l10.13-1.5L16 2z"/></svg>
+            <svg viewBox="0 0 32 32"><path d="M16 2l4.87 9.87L31 13.37l-7.62 7.42L25.18 31 16 25.87 6.82 31l1.8-10.21L1 13.37l10.13-1.5L16 2z"/></svg>
+            <!-- Half star representation -->
+            <svg viewBox="0 0 32 32" style="opacity: 0.4;"><path d="M16 2l4.87 9.87L31 13.37l-7.62 7.42L25.18 31 16 25.87 6.82 31l1.8-10.21L1 13.37l10.13-1.5L16 2z"/></svg>
+          </div>
+          <p class="review-comment">
+            "Gaurav has an exceptional eye for detail in web design. His work on website design interfaces is clean, user-friendly, and aligns perfectly with project objectives. A reliable developer and coordinator."
+          </p>
+        </div>
+
+        <!-- Review 2: Peer Review -->
+        <div class="review-item">
+          <div class="review-author-row">
+            <div class="review-author-avatar">P</div>
+            <div class="review-author-meta">
+              <h4 class="review-author-name">Class Cohort Peer</h4>
+              <span class="review-author-title">IT Section A</span>
+            </div>
+          </div>
+          <div class="review-stars-row">
+            <svg viewBox="0 0 32 32"><path d="M16 2l4.87 9.87L31 13.37l-7.62 7.42L25.18 31 16 25.87 6.82 31l1.8-10.21L1 13.37l10.13-1.5L16 2z"/></svg>
+            <svg viewBox="0 0 32 32"><path d="M16 2l4.87 9.87L31 13.37l-7.62 7.42L25.18 31 16 25.87 6.82 31l1.8-10.21L1 13.37l10.13-1.5L16 2z"/></svg>
+            <svg viewBox="0 0 32 32"><path d="M16 2l4.87 9.87L31 13.37l-7.62 7.42L25.18 31 16 25.87 6.82 31l1.8-10.21L1 13.37l10.13-1.5L16 2z"/></svg>
+            <svg viewBox="0 0 32 32"><path d="M16 2l4.87 9.87L31 13.37l-7.62 7.42L25.18 31 16 25.87 6.82 31l1.8-10.21L1 13.37l10.13-1.5L16 2z"/></svg>
+            <svg viewBox="0 0 32 32"><path d="M16 2l4.87 9.87L31 13.37l-7.62 7.42L25.18 31 16 25.87 6.82 31l1.8-10.21L1 13.37l10.13-1.5L16 2z"/></svg>
+          </div>
+          <p class="review-comment">
+            "As our Class Representative, Gaurav stands out in coordination and management. His academic projects in systems C++ programming and database queries are highly structural and complete."
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       8. Listing Details Modal Overlay
+       ========================================== -->
+  <div class="modal-overlay" id="project-detail-modal">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close modal">✕</button>
+      
+      <div class="modal-body" id="modal-content-area">
+        <!-- Rendered dynamically by app.js depending on selected card -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       9. Footer & Legal Band
+       ========================================== -->
+  <footer class="footer-light" id="contact">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <div class="footer-column">
+          <h3 class="footer-col-title">Main Stack</h3>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#">React Framework</a></li>
+            <li class="footer-link-item"><a href="#">Tailwind Styling</a></li>
+            <li class="footer-link-item"><a href="#">Relational SQL DBMS</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-col-title">Systems</h3>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#">C & C++ Programming</a></li>
+            <li class="footer-link-item"><a href="#">Python Scripting</a></li>
+            <li class="footer-link-item"><a href="#">UX Web Redesign</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-col-title">Employer & Contact</h3>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="https://amurot.com" target="_blank" rel="noopener">amurot.com (Internship)</a></li>
+            <li class="footer-link-item"><a href="mailto:gaurav86y@gmail.com">gaurav86y@gmail.com</a></li>
+            <li class="footer-link-item"><a href="example.com/something" target="_blank">Download Resume PDF</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="legal-band">
+        <div class="legal-left">
+          <span>© 2026 Gaurav Yadav</span>
+          <span>·</span>
+          <a href="https://github.com/genius-gaurav" target="_blank" rel="noopener">GitHub</a>
+          <span>·</span>
+          <a href="https://www.linkedin.com/in/gaurav-yadav-535137399" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        
+        <div class="legal-right">
+          <span class="legal-util-link">
+            <svg viewBox="0 0 16 16" style="width: 16px; height: 16px; fill: currentColor;"><path d="M8 0a8 8 0 1 0 8 8A8.009 8.009 0 0 0 8 0zm.5 11.5a.5.5 0 0 1-1 0v-6a.5.5 0 0 1 1 0v6zm0-7.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/></svg>
+            <span>English (US)</span>
+          </span>
+          <span>INR</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- App Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
