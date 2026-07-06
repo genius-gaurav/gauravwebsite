@@ -1,6 +1,5 @@
-/**
- * Projects Data and Modal Controllers
- */
+import { showCustomConfirm } from './dialog.js';
+
 export const PROJECTS_DATA = {
   1: {
     id: 1,
@@ -168,10 +167,15 @@ export function initProjects() {
   // Header quick actions
   if (profileDropdownTrigger) {
     profileDropdownTrigger.addEventListener('click', () => {
-      const confirmMsg = confirm("Would you like to send an email to Gaurav Yadav directly?");
-      if (confirmMsg) {
-        window.location.href = "mailto:gaurav86y@gmail.com?subject=Inquiry%20from%20Portfolio";
-      }
+      showCustomConfirm({
+        title: "Send Email",
+        message: "Would you like to send an email to Gaurav Yadav directly?",
+        confirmText: "Send Email",
+        cancelText: "Cancel",
+        onConfirm: () => {
+          window.location.href = "mailto:gaurav86y@gmail.com?subject=Inquiry%20from%20Portfolio";
+        }
+      });
     });
   }
 
